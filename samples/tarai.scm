@@ -1,8 +1,5 @@
 #!/usr/bin/env gosh
 
-(use gauche.time)
-(use benchmark)
-
 (define (tarai x y z)
   (if (<= (x) (y))
       (y)
