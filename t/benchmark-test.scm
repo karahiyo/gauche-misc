@@ -15,3 +15,6 @@
 
 (dotimes (i 3) (bench "1?" (sys-sleep 1)))
 
+(let1 counter "it's a dummy counter"
+      (bench "variable capture ok?" (print counter)))
+
