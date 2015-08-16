@@ -6,6 +6,9 @@ benchmark:
 tarai:
 	$(GOSH) -I $(CWD)/lib $(CWD)/samples/tarai.scm
 
+tarai-with-closure:
+	$(GOSH) -I $(CWD)/lib $(CWD)/samples/tarai-with-closure.scm
+
 aobench:
 	$(GOSH) -I $(CWD)/lib $(CWD)/samples/aobench.scm
 
