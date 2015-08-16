@@ -1,8 +1,6 @@
 (define-module benchmark
   (export-all)
 
-  (use gauche.time)
-
   (define-syntax bench
     (syntax-rules ()
                   ((_ exprs) (bench-with-msg exprs (quote exprs)))
@@ -16,7 +14,7 @@
                                (lambda () ,exprs)
                                (lambda () (begin
                                             (time-counter-stop! ,counter)
-                                            (print "** " (or ,msg (quote exprs)) ": " (time-counter-value ,counter))))))))
+                                            (print "** " ,msg ": " (time-counter-value ,counter))))))))
 
   )
 
